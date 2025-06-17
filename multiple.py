@@ -10,28 +10,28 @@ if enterpass != passw:
 
 bool = True
 while bool:
-    print("Welcome to the ATM")
-    print("1. CHECK BALANCE")
-    print("2. DEPOSIT MONEY")
-    print("3. WITHRAW MONEY")
-    print("4. EXIT")
+    print("\nWelcome to the ATM")
+    print("1. CHECK BALANCE ")
+    print("2. DEPOSIT MONEY ")
+    print("3. WITHRAW MONEY ")
+    print("4. EXIT ")
 
-    num = input("Choose Ur Option")
+    num = input("\nChoose Ur Option: ")
 
     if num == "1":
         print(f"ur balance is {balance} $")
         transaction+=1
     elif num == "2":
         
-        amount = float(input("Enter Deposit Amount"))
+        amount = float(input("\nEnter Deposit Amount: "))
         if amount < 0:
             print("Invalid")
         else:
             balance += amount
-            print(f"Deposited {amount}$.\nNew Balance: {balance}$.")
+            print(f"\nDeposited {amount}$.\nNew Balance: {balance}$.\n")
             transaction+=1
     elif num == "3":
-        withdr =  float(input("Enter Withdrawal Amount"))
+        withdr =  float(input("\nEnter Withdrawal Amount: "))
         if withdr <= 0:
             print("Invalid")
         elif withdr > balance:
@@ -41,10 +41,10 @@ while bool:
                 print("Warning, more than 3 withdrawal attempts have failed")
         else: 
             balance = balance - withdr
-            print(f"Withdrew {withdr}$.\nNew Balance: {balance}$.")
+            print(f"\nWithdrew {withdr}$.\nNew Balance: {balance}$.\n")
             transaction+=1
     elif num == "4":
-        print(f"nb of transactions done: {transaction}")
+        print(f"nb of transactions done: {transaction}\n")
         print("Exiting")
         break
     else:
