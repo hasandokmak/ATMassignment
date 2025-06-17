@@ -30,4 +30,8 @@ while bool:
             print("Error")
         else: 
             balance = balance - amount
-  
+    elif num == "4":
+        print("Exiting")
+        break
+    else:
+        print("No such option")
