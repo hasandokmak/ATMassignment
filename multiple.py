@@ -36,13 +36,16 @@ while bool:
             print("Invalid")
         elif withdr > balance:
             print("Error")
+            failed += 1
+            if failed > 3:
+                print("Warning, more than 3 withdrawal attempts have failed")
         else: 
-            balance = balance - amount
+            balance = balance - withdr
             print(f"Withdrew {withdr}$.\nNew Balance: {balance}$.")
             transaction+=1
     elif num == "4":
-        print(f"transactions done: {transaction}")
+        print(f"nb of transactions done: {transaction}")
         print("Exiting")
         break
     else:
-        print("No such option")
+        print("No of such option")
