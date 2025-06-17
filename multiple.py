@@ -20,4 +20,14 @@ while bool:
 
     if num == "1":
         print(f"ur balance is {balance} $")
-
+    elif num == "2":
+        amount = float(input("Enter Deposit Amount"))
+        balance += amount
+        print(f"Deposited {amount}$.\nNew Balance: {balance}$.")
+    elif num == "3":
+        withdr =  float(input("Enter Withdrawal Amount"))
+        if amount > balance:
+            print("Error")
+        else: 
+            balance = balance - amount
+  
